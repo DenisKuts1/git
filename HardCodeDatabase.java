@@ -20,25 +20,24 @@ public class HardCodeDatabase {
         hotels = new ArrayList<Hotel>();
         vouchers = new ArrayList<Voucher>();
 
-        countries.add(new Country("Ukraine"));
-        countries.add(new Country("Poland"));
+        countries.add(new Country(0,"Ukraine"));
+        countries.add(new Country(1,"Poland"));
 
-        cities.add(new City("Lviv", countries.get(0)));
-        cities.add(new City("Kyiv", countries.get(0)));
+        cities.add(new City(0,"Lviv", countries.get(0)));
+        cities.add(new City(1,"Kyiv", countries.get(0)));
+        cities.add(new City(2,"Varshava", countries.get(1)));
+        cities.add(new City(3,"Gdansk", countries.get(1)));
 
-        cities.add(new City("Varshava", countries.get(1)));
-        cities.add(new City("Gdansk", countries.get(1)));
+        clients.add(new Client(0,"Ivanov Ivan", "+380673939675"));
+        clients.add(new Client(1,"Petrov Petro", "+380992057704"));
 
-        clients.add(new Client("Ivanov Ivan", "+380673939675"));
-        clients.add(new Client("Petrov Petro", "+380992057704"));
+        hotels.add(new Hotel(0,"LvivHotel", cities.get(0), 4));
+        hotels.add(new Hotel(1,"KyivHotel", cities.get(1), 5));
+        hotels.add(new Hotel(2,"VarshavaHotel", cities.get(2), 5));
+        hotels.add(new Hotel(3,"GdanskHotel", cities.get(3), 3));
 
-        hotels.add(new Hotel("LvivHotel", cities.get(0), 4));
-        hotels.add(new Hotel("KyivHotel", cities.get(1), 5));
-        hotels.add(new Hotel("VarshavaHotel", cities.get(2), 5));
-        hotels.add(new Hotel("GdanskHotel", cities.get(3), 3));
-
-        vouchers.add(new Voucher(clients.get(0), hotels.get(1), new Date(2017,10, 5)));
-        vouchers.add(new Voucher(clients.get(1), hotels.get(2), new Date(2017,9, 10)));
-
+        vouchers.add(new Voucher(0, clients.get(0), hotels.get(1), new Date(2017,10, 5)));
+        vouchers.add(new Voucher(1, clients.get(1), hotels.get(2), new Date(2017,9, 10)));
     }
+
 }
