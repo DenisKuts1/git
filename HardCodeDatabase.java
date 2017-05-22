@@ -40,4 +40,90 @@ public class HardCodeDatabase {
         vouchers.add(new Voucher(1, clients.get(1), hotels.get(2), new Date(2017,9, 10)));
     }
 
+
+    public ArrayList<City> getCities() {
+        return cities;
+    }
+
+    public ArrayList<Client> getClients() {
+        return clients;
+    }
+
+    public ArrayList<Country> getCountries() {
+        return countries;
+    }
+
+    public ArrayList<Hotel> getHotels() {
+        return hotels;
+    }
+
+    public ArrayList<Voucher> getVouchers() {
+        return vouchers;
+    }
+
+    public void addCity(City city){
+        cities.add(city);
+    }
+
+    public void addClient(Client client){
+        clients.add(client);
+    }
+
+    public void addCountry(Country country){
+        countries.add(country);
+    }
+
+    public void addHotel(Hotel hotel){
+        hotels.add(hotel);
+    }
+
+    public void addVoucher(Voucher voucher){
+        vouchers.add(voucher);
+    }
+
+    public void deleteCity(City city){
+        cities.remove(city);
+    }
+
+    public void deleteClient(Client client){
+        clients.remove(client);
+    }
+
+    public void deletedCountry(Country country){
+        countries.remove(country);
+    }
+
+    public void deleteHotel(Hotel hotel){
+        hotels.remove(hotel);
+    }
+
+    public void deleteVoucher(Voucher voucher){
+        vouchers.remove(voucher);
+    }
+
+    public void updateCity(City city){
+        cities.remove(city.getId());
+        cities.add(city.getId(), city);
+    }
+
+    public void updateClient(Client client){
+        clients.remove(client.getId());
+        clients.add(client.getId(), client);
+    }
+
+    public void updateCountry(Country country){
+        countries.remove(country.getId());
+        countries.add(country.getId(), country);
+    }
+
+    public void updateHotel(Hotel hotel){
+        hotels.remove(hotel.getId());
+        hotels.add(hotel.getId(), hotel);
+    }
+
+    public void updateVoucher(Voucher voucher){
+        vouchers.remove(voucher.getId());
+        vouchers.add(voucher.getId(), voucher);
+    }
+
 }
