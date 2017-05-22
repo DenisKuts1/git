@@ -94,5 +94,5 @@ public class DBConnector {
     public void insertVoucher(Voucher voucher){
         database.addVoucher(voucher);
     }
-    
+
 }
